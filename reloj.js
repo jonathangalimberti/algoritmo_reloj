@@ -1,11 +1,17 @@
+const d = document.getElementById("reloj");
+
+
 let h = 00;
 let m = 00;
 let s = 00;
+
+
+function time(h,m,s){
 setInterval(() => {
     
          if(s<60){
         
-        console.log(`la hora es ${h}:${m}:${s}`);
+        d.innerHTML=`tiempo transcurrido ${h}:${m}:${s}`;
             s=s+1;
            
         } 
@@ -28,4 +34,6 @@ setInterval(() => {
 
     }, 1000);
 
-   
+}
+time (h,m,s);
+
